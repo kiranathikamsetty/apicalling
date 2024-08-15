@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Calling With JS</title>
+    <link rel="icon"href="https://w7.pngwing.com/pngs/585/3/png-transparent-telegram-bot-api-bitcoin-cryptocurrency-segwit-bitcoin-telephone-call-hand-logo-thumbnail.png"/>
+</head>
+
+<style>
+    
+    .main{
+        background-color: antiquewhite;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+    }
+    .box{
+        padding: 2%;
+        height: 450px;
+        width: 250px;
+        border: 2px solid lightslategray;
+        margin: 2%;
+    }
+    .box img{
+        width: 90%;
+        height: auto;
+    }
+
+    .card{
+        border: 2px solid rgb(183, 143, 201);
+        padding: 5px;
+        margin : 5px;
+        
+    }
+     img{
+        height: 300px;
+     }
+  
+</style>
+
+
+<body>
+    
+        <div class="main">
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            .<div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <title></title>
+                <p></p>
+                <span></span>
+                
+            </div>
+            
+        </div>
+    
+
+
+    <script>
+        let cards = document.querySelectorAll(".card");
+        async function getdata(){
+            let responce =await fetch("https://dummyjson.com/products");
+            let data =await responce.json();
+            console.log(data.products);
+    
+           
+            cards.forEach((element,i)=>{
+                element.getElementsByTagName("img")[0].src=data.products[i].images[0];
+                element.getElementsByTagName("title")[0].innerHTML=data.products[i].title;
+                element.getElementsByTagName("p")[0].innerHTML=data.products[i].price;
+                element.getElementsByTagName("span")[0].innerHTML=data.products[i].brand;
+                
+            })
+        }
+          getdata();
+          
+    </script>
+
+        
+
+    
+</body>
+</html>
